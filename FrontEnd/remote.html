@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NativeRemocon</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/www/style.css">
+  </head>
+  <body style="visibility: hidden;">
+    <div id="vue">
+      <div class="container mt-2">
+        <div>
+          <h3>การเล่นเสียง</h3>
+          <div class="btn-group">
+            <button control="audio/previous" class="btn btn-lg btn-info" @click="control"><i class="fa fa-step-backward"></i></button>
+            <button control="audio/play" class="btn btn-lg btn-primary" @click="control"><i class="fa fa-play"></i></button>
+            <button control="audio/next" class="btn btn-lg btn-info" @click="control"><i class="fa fa-step-forward"></i></button>
+          </div>
+          
+          <div class="btn-group">
+            <button control="audio/down" class="btn btn-lg btn-info" @click="control"><i class="fa fa-volume-down"></i></button>
+            <button control="audio/up" class="btn btn-lg btn-info" @click="control"><i class="fa fa-volume-up"></i></button>
+            <button control="audio/mute" class="btn btn-lg btn-secondary" @click="control"><i class="fa fa-volume-off"></i></button>
+          </div>
+          
+          <div class="btn-group">
+            <button control="audio/reconnect" class="btn btn-lg btn-success" @click="control"><i class="fa fa-refresh"></i></button>
+          </div>
+        </div>
+        
+        <div>
+          <h3>การควบคุม</h3>
+          <div class="">
+            <div class="btn-group my-1">
+              <button control="keyboard/ctrl/left" class="btn btn-lg btn-info" @click="control"><i class="fa fa-arrow-left"></i></button>
+              <button control="keyboard/shift/left" class="btn btn-lg btn-info" @click="control"><i class="fa fa-angle-double-left"></i></button>
+              <button control="keyboard/left" class="btn btn-lg btn-info" @click="control"><i class="fa fa-angle-left"></i></button>
+              <button control="keyboard/right" class="btn btn-lg btn-info" @click="control"><i class="fa fa-angle-right"></i></button>
+              <button control="keyboard/shift/right" class="btn btn-lg btn-info" @click="control"><i class="fa fa-angle-double-right"></i></button>
+              <button control="keyboard/ctrl/right" class="btn btn-lg btn-info" @click="control"><i class="fa fa-arrow-right"></i></button>
+            </div>
+            <div class="btn-group my-1">
+              <button control="keyboard/0" class="btn btn-success" @click="control">0</button>
+              <button control="keyboard/1" class="btn btn-success" @click="control">1</button>
+              <button control="keyboard/2" class="btn btn-success" @click="control">2</button>
+              <button control="keyboard/3" class="btn btn-success" @click="control">3</button>
+              <button control="keyboard/4" class="btn btn-success" @click="control">4</button>
+              <button control="keyboard/5" class="btn btn-success" @click="control">5</button>
+              <button control="keyboard/6" class="btn btn-success" @click="control">6</button>
+              <button control="keyboard/7" class="btn btn-success" @click="control">7</button>
+              <button control="keyboard/8" class="btn btn-success" @click="control">8</button>
+              <button control="keyboard/9" class="btn btn-success" @click="control">9</button>
+            </div>
+            <div class="btn-group my-1">
+              <button control="keyboard/c" class="btn btn-warning" @click="control">C</button>
+              <button control="keyboard/f" class="btn btn-warning" @click="control">F</button>
+              <button control="keyboard/t" class="btn btn-warning" @click="control">T</button>
+              <button control="keyboard/space" class="btn btn-warning" @click="control">Space</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios@0.20.0/dist/axios.min.js"></script>
+    <script src="/www/remote.js"></script>
+  </body>
+</html>
