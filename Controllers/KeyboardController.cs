@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +37,7 @@ namespace NativeRemocon.Controllers {
 
     [HttpGet("{key}")]
     public IActionResult Key(string key) {
+      Console.WriteLine($"CONTROL: KEY {key}");
       if (keyMapping.ContainsKey(key)) {
         keyboard.Send(keyMapping[key]);
       }
@@ -44,6 +46,7 @@ namespace NativeRemocon.Controllers {
 
     [HttpGet("{combineKey}/{mainKey}")]
     public IActionResult CombineKey(string combineKey, string mainKey) {
+      Console.WriteLine($"CONTROL: KEY {combineKey}/{mainKey}");
       if (keyMapping.ContainsKey(combineKey) && keyMapping.ContainsKey(mainKey)) {
         keyboard.CombinedSend(keyMapping[combineKey], keyMapping[mainKey]);
       }
